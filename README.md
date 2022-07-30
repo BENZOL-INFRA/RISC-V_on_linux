@@ -1,2 +1,2 @@
-# RISC-V_on_linux
+# Linux on RISC-V
 test
