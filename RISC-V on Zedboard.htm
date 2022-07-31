@@ -1,0 +1,2363 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=big5">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 12">
+<meta name=Originator content="Microsoft Word 12">
+<link rel=File-List href="RISC-V%20on%20Zedboard.files/filelist.xml">
+<link rel=Edit-Time-Data href="RISC-V%20on%20Zedboard.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>HP</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>HP</o:LastAuthor>
+  <o:Revision>11</o:Revision>
+  <o:TotalTime>137</o:TotalTime>
+  <o:Created>2022-07-30T07:06:00Z</o:Created>
+  <o:LastSaved>2022-07-30T09:09:00Z</o:LastSaved>
+  <o:Pages>15</o:Pages>
+  <o:Words>3547</o:Words>
+  <o:Characters>20224</o:Characters>
+  <o:Lines>168</o:Lines>
+  <o:Paragraphs>47</o:Paragraphs>
+  <o:CharactersWithSpaces>23724</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="RISC-V%20on%20Zedboard.files/themedata.thmx">
+<link rel=colorSchemeMapping
+href="RISC-V%20on%20Zedboard.files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>130</w:Zoom>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-TW</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="--"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:新細明體;
+	panose-1:2 2 5 0 0 0 0 0 0 0;
+	mso-font-alt:PMingLiU;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611969 684719354 22 0 1048577 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073786111 1 0 415 0;}
+@font-face
+	{font-family:"\@新細明體";
+	panose-1:2 2 5 0 0 0 0 0 0 0;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611969 684719354 22 0 1048577 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:新細明體;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"頁首 字元";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:新細明體;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"頁尾 字元";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:新細明體;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"註解方塊文字 字元";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	font-size:9.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:新細明體;
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	mso-font-kerning:1.0pt;}
+span.a
+	{mso-style-name:"註解方塊文字 字元";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:註解方塊文字;
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:新細明體;
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;}
+p.Default, li.Default, div.Default
+	{mso-style-name:Default;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:新細明體;
+	mso-fareast-theme-font:minor-fareast;
+	color:black;}
+span.a0
+	{mso-style-name:"頁首 字元";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:頁首;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-font-kerning:1.0pt;}
+span.a1
+	{mso-style-name:"頁尾 字元";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:頁尾;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-font-kerning:1.0pt;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;
+	mso-footnote-separator:url("RISC-V%20on%20Zedboard.files/header.htm") fs;
+	mso-footnote-continuation-separator:url("RISC-V%20on%20Zedboard.files/header.htm") fcs;
+	mso-endnote-separator:url("RISC-V%20on%20Zedboard.files/header.htm") es;
+	mso-endnote-continuation-separator:url("RISC-V%20on%20Zedboard.files/header.htm") ecs;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:表格內文;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="4098"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=ZH-TW style='tab-interval:24.0pt;text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<p class=Default><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;</span></span><b><span
+lang=EN-US style='font-size:16.0pt'>Driver development for Zedboard peripherals
+and their integration into the SOC LINUX operating system<o:p></o:p></span></b></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:16.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:16.0pt'>1. Introduction </span></b><span
+lang=EN-US style='font-size:16.0pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Nowadays Embedded
+System based applications are increasing.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Its very usual to find them.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>&#304;nside a television, a refrigerator, a car
+or even inside a plane.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>These things are very different but not
+the tools to develop the Embedded System.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The best characteristic of an Embedded
+System is its versatility because with the same computer and the same tools it
+is possible to develop systems completely different.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The Embedded Systems have the same
+advantages of software tools in the electronic systems field, allowing the
+designer to develop specific applications independently of the hardware
+architecture in an easy way.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>There are many options
+to build an Embedded System regarding to the operating system.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Some of those options are Android OS,
+Embedded Windows or Embedded Linux.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The Embedded Linux is the mostly used in
+the professional environment for that reason it will be the option chosen to
+develop the example of this document.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>There are several
+ways to build an embedded system but all of them share some common steps.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>One of these steps is the Linux
+customization, for this purpose Linuxlink will be used.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>Linuxlink is a
+tool created by Timesys Company to build custom configurations of Embedded
+Linux in an easy way.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Another purpose of this document is to
+understand how to use this tool and build an example project with it.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Another issue to
+solve is the hardware platform where the Embedded Linux is going to be used.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>There are many different platforms and
+not all are supported by Linuxlink.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The development platform chosen is the
+Zedboard, based on Xilinx’s Zynq 7000 System on Chip which contains a dual core
+ARM Cortex-A9 and a 7 Series FPGA Artix-7.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>This is not the most complete platform
+but allows designer to start in this field without many problems and is a good
+approach to professional platforms.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>[2] <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Another topic is
+mentioned that UART.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>In UART communication, two UARTs communicate
+directly with each other.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The transmitting UART converts parallel
+data from a controlling device like a CPU into serial form, transmits it in
+serial to the receiving UART, which then converts the serial data back into
+parallel data for the receiving device.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Only two wires are needed to transmit
+data between two UARTs.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Data flows from the
+Tx pin of the transmitting UART to the Rx pin of the receiving UART.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>UARTs transmit data asynchronously, which
+means there is no clock signal to synchronize the output of bits from the
+transmitting UART to the sampling of bits by the receiving UART.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Instead of a clock signal, the
+transmitting UART adds start and stop bits to the data packet being
+transferred.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>These bits define the beginning and end
+of the data packet so the receiving UART knows when to start reading the bits.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>When the receiving
+UART detects a start bit, it starts to read the incoming bits at a specific
+frequency known as the baud rate.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Baud rate is a measure of the speed of
+data transfer, expressed in bits per second (bps).<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Both UARTs must operate at about the same
+baud rate.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The baud rate between the transmitting
+and receiving UARTs can only differ by about 10% before the timing of bits gets
+too far off. [3]<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:16.0pt'>1.1 Document
+Structure </span></b><span lang=EN-US style='font-size:16.0pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The document is
+divided into three main sections: <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The first section
+contains the definitions of everything involved in this project.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>At the same time, this section is divided
+into five parts: <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>In first place an Embedded
+Linux definition.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Second, Zedboard
+development platform definition.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The third part
+explains the tools involved in the building process.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Every tool has
+different purpose and theses purposes will be described.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>In fourth place, an
+alternative to Linuxlink will be presented.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Finally, all main
+files involved in the process will be described to understand the specific
+function of each one.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The second part is
+divided into four parts: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>The first part
+describes the Linuxlink building process.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The second one
+describes the Vivado design cycle.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>In third place the
+SDK process will be described.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The last part
+describes some other actions needed for booting the system.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The last section is
+divided into four main sections: <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>First of all, the
+board to be used was selected.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Then the processing
+system is selected and the uart connections are removed.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Third, the SDK was
+migrated and the necessary codes were embedded in the card.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>Finally, the data
+received via UART was displayed using the Teraterm program.[4]<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:16.0pt'>2. Requirements </span></b><span
+lang=EN-US style='font-size:16.0pt'><o:p></o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>Why Develop and
+Implement an Embedded Linux Operating System: </span></b><span lang=EN-US
+style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>There are a
+countless number of reasons to develop and implement an embedded Linux system.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The most relevant will be explained
+during this section and are summarize below.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>-Community support
+and possibility of taking part into it.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>-Devices coverage.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>-Eases the new
+features testing.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>-Full control.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>-Low cost.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>-Platform reusage.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>-Quality.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>-RTOS (Real Time
+Operating System) possibility.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>After knowing the
+major advantages of embedded Linux systems, it will be perfectly clear the
+usefulness of knowing how to develop and implement a system of this kind.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>Community Support
+and Possibility of Taking Part into It: </span></b><span lang=EN-US
+style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Linux is an
+open-source code; therefore, there are a great number of developers and user
+communities sharing their knowledge and code.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>This results in a high-quality support in
+which anyone can directly contact with many developers who are working or have
+been working in the same topic.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>In addition, these
+communities are usually internet communities, allowing 24-hour availability to
+the user and speeding up the problems resolution.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Finally, there is
+also the opportunity of taking part into the different communities, for example
+to bug report; to add new code, versions or patches; etc.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>- Devices
+Coverage </span></b><span lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Due to the rest of
+its advantages, there are a great range of systems based on embedded Linux
+kernel, such as smartphones, tablets, PDAs, smart TVs, machine control, and
+medical instrument, among others.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>- Eases the New
+Features Testing </span></b><span lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>As already
+mentioned, Linux is an open-source code.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Therefore, it is really easy to get a
+piece of software and evaluate it.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>It allows studying several options while
+making a choice.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Furthermore, new possibilities and
+solutions can be investigated.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>As a result, it is
+too much easier and cheaper than purchasing or using proprietary-product trial
+versions.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>- Full Control </span></b><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The developer can have
+access to the source code for all components, allowing unlimited changes,
+modifications, and optimizations without vendor lock-in.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Therefore, the developer has full control
+over the software.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Nevertheless, that
+is not the case of proprietary embedded operating systems, where the opposite
+is the case.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>- Low Cost </span></b><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Being an open-source
+includes being free of charge.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Therefore, this free software can be
+duplicated on as many devices as it was necessary with no costs.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>It is one of the key
+advantages, and it can be considered that all other benefits have been produced
+as a consequence of this advantage.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>- Platform
+Re-usage </span></b><span lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Linux already
+provides many components and code for standard well-know functions, such as
+libraries, multimedia, graphics, protocols, etc.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>It allows quickly
+developing complex products, based on easier, already available components.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Therefore, it is not necessary to
+re-develop the same code by different developers.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Being able to re-use
+the components and code is another of the key advantages of embedded Linux.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>It results from the rest of advantages of
+embedded Linux over proprietary embedded operating systems.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>- Quality </span></b><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The open-source
+components are widely used, in a great multitude of systems.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Therefore, a large number of users
+develop different embedded Linux components and share their knowledge, allowing
+designing a high quality system with high quality components.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='page-break-before:always'><b><span lang=EN-US
+style='font-size:11.5pt'>- RTOS (Real Time Operating System) Possibility </span></b><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>Another benefit of
+using an embedded Linux RTOS over a traditional proprietary RTOS is that the
+Linux community tends to support new IP and other protocols faster than RTOS
+vendors do.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>[5]<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:16.0pt'>3. Materials and
+Methods </span></b><span lang=EN-US style='font-size:16.0pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Zedboard development
+platform: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>Zedboard was
+created to be a community development platform evaluation and development board
+based on Xilinx Zynq-7000 All Programmable System on Chip.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Combining a dual Cortex- A9 Processing
+System with 85000 7-Series Programmable Logic cells, the board allows the
+designer to implement many different applications and use many different
+connections.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Features of zedboard is shown in Figure
+1.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="圖片_x0020_1" o:spid="_x0000_i1041" type="#_x0000_t75"
+ style='width:462pt;height:522pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=616 height=696
+src="RISC-V%20on%20Zedboard.files/image002.jpg" v:shapes="圖片_x0020_1"><![endif]></span><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Figure 1</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>Figure 2 shows the
+peripherals that are included on Zedboard and a block diagram that explains how
+they are inter-connected.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="圖片_x0020_4" o:spid="_x0000_i1040" type="#_x0000_t75" style='width:495.6pt;
+ height:471.6pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=661 height=629
+src="RISC-V%20on%20Zedboard.files/image004.jpg" v:shapes="圖片_x0020_4"><![endif]></span><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:11.5pt'>Figure 2 </span></b><span
+lang=EN-US style='font-size:11.5pt'>– Zedboard Block Diagram<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Xilinx Zynq-7000 Soc
+<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The heart of the
+Zedboard is a Xilinx All Programmable SoC architecture.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>This Soc integrates a dual-core ARM
+Cortex-A9 MPCore based Processing System (PS) and a Xilinx Programmable Logic
+(PL) in a single chip.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The PS includes on-chip memory, external
+memory interfaces and a set of I/O peripherals.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Figure 3 illustrates
+the functional blocks of the Zynq-7000 AP SoC.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>PS and PL are on separated power domains,
+allowing the user to power down the PL management.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>The processors in
+the PS usually boot first.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The PL could be configured as part of the
+boot process or configured after.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The PL can be completely reconfigured or
+used with partial, dynamic reconfiguration (PR).<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>PR allows the configuration of a part of
+the PL.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="圖片_x0020_7" o:spid="_x0000_i1039" type="#_x0000_t75" style='width:562.8pt;
+ height:441.6pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=750 height=589
+src="RISC-V%20on%20Zedboard.files/image006.jpg" v:shapes="圖片_x0020_7"><![endif]></span><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:11.5pt'>Figure 3 </span></b><span
+lang=EN-US style='font-size:11.5pt'>– Zynq 7000 functional blocks<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>3.1 Tools <o:p></o:p></span></b></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>There are three tools involved in the
+process: <o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>Linuxlink: </span></b><span lang=EN-US
+style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>Linuxlink is an online tool, developed by
+Timesys Company that allows the designer to create an Embedded Linux
+distribution by choosing the main features as the kernel, root file system
+(RFS), toolchain and packages to install into the RFS.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>It is not a completely online tool
+because it could be installed in a computer but this tool needs the internet
+connectivity in order to do some checks about the updates and to download the
+new packages if chosen.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>Vivado: </span></b><span lang=EN-US
+style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>Vivado is a Xilinx Company tool.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Its purpose is to configure the hardware.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>With this tool the interconnections
+between the PS and the PL are configured.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>It is possible to add customize hardware
+such as specific purpose peripherals and many other things.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>SDK: </span></b><span lang=EN-US
+style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>SDK is a Xilinx Company tool.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Its purpose is to help the designer with
+the software.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>It has the possibility to generate very
+important software as the first stage bootloader (FSBL), device tree blob (DTB)
+and BOOT.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>bin among others.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>[6] <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>Tera Term</span></b><span lang=EN-US
+style='font-size:11.5pt'>: It is an open-source, free, software implemented,
+terminal emulator (communications) program.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>It emulates different types of computer terminals,
+from DEC VT100 to DEC VT382.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>It supports telnet, SSH 1 &amp; 2 and
+serial port connections.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>It also has a built-in macro scripting
+language (supporting Oniguruma regular expressions) and a few other useful
+plugins.[7]<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>3.2 Main files
+definition </span></b><span lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>First at all the definition of “main file”
+will be shown.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>Main file: </span></b><span lang=EN-US
+style='font-size:11.5pt'>it is not a common definition, it is only used to
+distinguish which files are important and which of them are very important.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>In this case the very important files
+will be defined.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>This means, the files that are going to
+be inside the SD card or the files that are strictly needed to generate the
+previous ones.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>The files are not displayed in alphabetical
+order instead they are displayed in order of appearance.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>They are: <o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>uImage: </span></b><span lang=EN-US
+style='font-size:11.5pt'>this is the kernel image.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>This file is configurable.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>This file is the first of the four main
+files.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>Device Tree Blob (dtb): </span></b><span
+lang=EN-US style='font-size:11.5pt'>It contains the hardware defined in Vivado
+as PS and PL.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>It could be modified by turning it into
+the device tree source (dts) file which is a text file.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>This is the second of the four main
+files.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>BOOT.bin: </span></b><span lang=EN-US
+style='font-size:11.5pt'>This is a file generated from the output.bif file.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>To understand the third main file lets
+going to see the output.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>bif first: <o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>Output.bif: </span></b><span lang=EN-US
+style='font-size:11.5pt'>this file contains the description of three files.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>This file contains some instructions to
+create the BOOT.bin.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>In it is specified if the files
+referenced are bootloader, data, etc.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>The referenced files in output.bif are: <o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>FSBL.elf: </span></b><span lang=EN-US
+style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>This file implements a first boot where the
+minimal configurations are done such as configure the UART.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Its name means First Stage Boot Loader.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>It is generated by SDK software.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>bitstream.bit: </span></b><span lang=EN-US
+style='font-size:11.5pt'>it contains the Programmable Logic (PL) configuration,
+this is an optional file and it is generated by Vivado software.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>u-boot.elf: </span></b><span lang=EN-US
+style='font-size:11.5pt'>this files boots the custom Embedded Linux.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>uramdisk.image.gz</span></b><span
+lang=EN-US style='font-size:11.5pt'>: this is the RFS image.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>It contains the packages selected for the
+Embedded Linux distribution.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>This file will be decompressed when the system
+boots.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>This is the fourth of the four main
+files.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>3.3 Custom
+Distribution </span></b><span lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>In this chapter an embedded system will be
+developed, from the beginning to the system booting.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Also a test user program and a debugging
+will be shown.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>The building process for a minimal embedded
+system is divided in four main steps: <o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>The first step includes the selection of
+the kernel, the device tree blob, the root files system and the u-boot files.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>The second step includes the creation of
+the bitstream and the Processing System configuration.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Also the FSBL and BOOT files will be
+generated.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>The third step describes the additional
+actions needed to boot the system correctly.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>The last step prepares the host for booting
+the system and boots it.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>Figure 4 describes the complete process.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-left:12.0pt;mso-para-margin-left:
+1.0gd;text-align:center'><span lang=EN-US style='font-size:11.5pt;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="圖片_x0020_10" o:spid="_x0000_i1038" type="#_x0000_t75"
+ style='width:556.8pt;height:279.6pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=742 height=373
+src="RISC-V%20on%20Zedboard.files/image008.jpg" v:shapes="圖片_x0020_10"><![endif]></span><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>Figure 4 </span></b><span lang=EN-US
+style='font-size:11.5pt'>– Custom Distribution Process<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>Figure 5 shows the main steps of the
+Linuxlink process.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The files in red are needed to create the
+final files.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The files in orange will be copied into
+the SD card<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-left:12.0pt;mso-para-margin-left:
+1.0gd;text-align:center'><span lang=EN-US style='font-size:11.5pt;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="圖片_x0020_13" o:spid="_x0000_i1037" type="#_x0000_t75"
+ style='width:462pt;height:468pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image009.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=616 height=624
+src="RISC-V%20on%20Zedboard.files/image010.jpg" v:shapes="圖片_x0020_13"><![endif]></span><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>Figure 5 </span></b><span lang=EN-US
+style='font-size:11.5pt'>– Linuxlink Design Flow<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>Figure 6 is described the de main steps of
+the design flow for Vivado and SDK software.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Files represented in red are going to be
+used to generate an orange file that is one of the main files for booting the
+system.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Notice that u-boot.elf was generated with
+Linuxlink.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-left:12.0pt;mso-para-margin-left:
+1.0gd;text-align:center'><span lang=EN-US style='font-size:11.5pt;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="圖片_x0020_16" o:spid="_x0000_i1036" type="#_x0000_t75"
+ style='width:547.8pt;height:514.8pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image011.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=730 height=686
+src="RISC-V%20on%20Zedboard.files/image012.jpg" v:shapes="圖片_x0020_16"><![endif]></span><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>Figure 6 </span></b><span lang=EN-US
+style='font-size:11.5pt'>– Vivado &amp; SDK Design Flow<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:11.5pt'>3.4 The script execution <o:p></o:p></span></b></p>
+
+<p class=Default><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>At this point there are already three files
+ready to copy into the SD card, only one remains, this is the “uramdisk.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>image.gz” or the RFS <o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>The file generated by Linuxlink cannot
+operate as RFS so it needs to be converted.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Additionally some changes in the RFS
+could be done.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>This is shown in Figure 7.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>Be sure that “rootfs.tar.gz” and “rfs.sh”
+are in the same folder. Run the script with “./rfs.sh”.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>Set the RFS size.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>It could not be bigger than 10MB for this
+example.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>Decide if a “getty” is needed.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>Getty is an utility that prompts a message
+at the end of the booting process to ask the user for a login.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>Set a root password.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>Make every additional changes needed for
+the system and at the end finish the conversion.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Finally, “uramdisk.image.gz” file has
+been created.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:11.5pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="圖片_x0020_19"
+ o:spid="_x0000_i1035" type="#_x0000_t75" style='width:420.6pt;height:447.6pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image013.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=561 height=597
+src="RISC-V%20on%20Zedboard.files/image014.jpg" v:shapes="圖片_x0020_19"><![endif]></span><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:11.5pt'>Figure 7 </span></b><span
+lang=EN-US style='font-size:11.5pt'>– Uramdisk build<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>3.5 Booting the
+system <o:p></o:p></span></b></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>First of all, the booting process, depicted
+in figure 8, <o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><b><span
+lang=EN-US style='font-size:11.5pt'>BootROM</span></b><span lang=EN-US
+style='font-size:11.5pt'>: Stage 0 Boot Loader, located in BootRom, will start
+to run.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The boot mode pins are checked to know
+from where to load the FSBL.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>Boot.bin is loaded by Stage 0 Boot Loader.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>FSBL starts to run and downloads the
+bitstream file to the PL system.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>After that, FSBL loads the u-boot to begin
+loading the operating system.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>U-boot calls the autoboot procedure to
+check the BootMode pins again for the source of the kernel image.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The procedure sdboot starts.<o:p></o:p></span></p>
+
+<p class=Default style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'>Sdboot reads the kernel image, device tree
+blob and the RFS.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>U-boot starts to run the kernel image
+from where sdboot loaded it.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The root file system is loaded by the
+kernel.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Finally the login prompt appears.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:11.5pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="圖片_x0020_22"
+ o:spid="_x0000_i1034" type="#_x0000_t75" style='width:364.8pt;height:336pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image015.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=486 height=448
+src="RISC-V%20on%20Zedboard.files/image016.jpg" v:shapes="圖片_x0020_22"><![endif]></span><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:11.5pt'>Figure 8 </span></b><span
+lang=EN-US style='font-size:11.5pt'>– Booting Sequence<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:11.5pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="圖片_x0020_25"
+ o:spid="_x0000_i1033" type="#_x0000_t75" style='width:685.8pt;height:406.8pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image017.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=914 height=542
+src="RISC-V%20on%20Zedboard.files/image018.jpg" v:shapes="圖片_x0020_25"><![endif]></span><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:11.5pt'>Figure 9 </span></b><span
+lang=EN-US style='font-size:11.5pt'>- Vivado Block Diagram<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>The connection between
+ESP8266 WIFI module and Zedboard is shown in figure 10. [8]<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="圖片_x0020_28" o:spid="_x0000_i1032" type="#_x0000_t75" style='width:698.4pt;
+ height:313.8pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image019.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=931 height=418
+src="RISC-V%20on%20Zedboard.files/image020.jpg" v:shapes="圖片_x0020_28"><![endif]></span><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:11.5pt'>Figure 10 -
+UART Block Diagram<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'>5. Test
+conditions<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>We used the
+oscilloscope whether the data came to the wifi module and this part is shown in
+<b>figures 11 and 12.<o:p></o:p></b></span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:11.5pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="圖片_x0020_31" o:spid="_x0000_i1031" type="#_x0000_t75" style='width:512.4pt;
+ height:399.6pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image021.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=683 height=533
+src="RISC-V%20on%20Zedboard.files/image022.jpg" v:shapes="圖片_x0020_31"><![endif]></span></b><b><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Figure 11</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="圖片_x0020_34" o:spid="_x0000_i1030"
+ type="#_x0000_t75" style='width:461.4pt;height:523.8pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image023.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=615 height=698
+src="RISC-V%20on%20Zedboard.files/image024.jpg" v:shapes="圖片_x0020_34"><![endif]></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Figure 12</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:16.0pt'>6. Results </span></b><span
+lang=EN-US style='font-size:16.0pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Development and
+Implementation of a custom Linux OS on ZedBoard <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Several actions,
+files and tools have been required to be able to develop and implement a
+specific OS into a specific board, in this case ZedBoard.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>On one hand, these required
+files are responsible for all the tasks that ZedBoard needs to execute in a
+particular order to boot Linux OS on it.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>These tasks range from prepared and
+configure the PL and PS in the first stages to boot the operating system itself
+at last instance ultimately.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>On the other hand,
+the entire set of necessary actions which have been necessary to configure and
+build these files throughout this thesis will be remembered and briefly
+summarized below.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>They will be also accompanied by the most
+relevant information and tools which should be known about them.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The Boot Image
+(“boot.bin”), which initializes the processor resources (FSBL file), configure
+the programmable logic (BitStream file), and loads the Linux kernel (U-Boot
+file).<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The Device Tree
+Binary File (“devicetree.dtb”), which is obtained from the Device Tree Source
+File and loaded into the DDR memory by U-Boot.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>It allows the kernel to know every detail
+about the hardware in which it is working on.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The Linux Kernel
+File (“uImage”), which is also loaded into the DDR memory by U-Boot.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>It initializes the system hardware and
+mounts the root file system.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The Root File System
+Image (“uramdisk.image.gz” or another partition with the OS files and folders),
+which can be a small custom image which is loaded into the DDR memory or can be
+a complete pre-configured OS which contains all necessary files and libraries
+to work as a normal PC. [9] <o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:11.5pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="圖片_x0020_37"
+ o:spid="_x0000_i1029" type="#_x0000_t75" style='width:474.6pt;height:512.4pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image025.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=633 height=683
+src="RISC-V%20on%20Zedboard.files/image026.jpg" v:shapes="圖片_x0020_37"><![endif]></span><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Figure 13</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>We observed the
+data transfer between the Zedboard and the WIFI module ESP 8266 using the Tera
+Term application.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>These parts are observed in <b>figures
+14,15,16,17.<o:p></o:p></b></span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:11.5pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="圖片_x0020_40" o:spid="_x0000_i1028" type="#_x0000_t75" style='width:525.6pt;
+ height:286.8pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image027.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=701 height=382
+src="RISC-V%20on%20Zedboard.files/image028.jpg" v:shapes="圖片_x0020_40"><![endif]></span></b><b><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Figure 14</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="圖片_x0020_43" o:spid="_x0000_i1027"
+ type="#_x0000_t75" style='width:522.6pt;height:335.4pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image029.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=697 height=447
+src="RISC-V%20on%20Zedboard.files/image030.jpg" v:shapes="圖片_x0020_43"><![endif]></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Figure 15</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="圖片_x0020_46" o:spid="_x0000_i1026"
+ type="#_x0000_t75" style='width:502.8pt;height:268.8pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image031.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=670 height=358
+src="RISC-V%20on%20Zedboard.files/image032.jpg" v:shapes="圖片_x0020_46"><![endif]></span></p>
+
+<p class=Default><span lang=EN-US>Figure 16 </span></p>
+
+<p class=Default><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default align=center style='text-align:center'><span lang=EN-US
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="圖片_x0020_49" o:spid="_x0000_i1025"
+ type="#_x0000_t75" style='width:541.8pt;height:298.8pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="RISC-V%20on%20Zedboard.files/image033.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=722 height=398
+src="RISC-V%20on%20Zedboard.files/image034.jpg" v:shapes="圖片_x0020_49"><![endif]></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Figure 17</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>Why on ZedBoard </span></b><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>There are a wide
+range of FPGAs, such as Artix, Kintex, Spartan, Virtex, Zynq ZC70X, etc.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Nevertheless, ZedBoard is the chosen
+board to be used and programmed in this case.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Therefore, the reasons to select ZedBoard
+instead of any of the previous boards are showed below and will be briefly
+explained: <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Different memories
+types <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Dual core ARM Cortex-A9
+<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Great variety of
+peripherals <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>SoC architecture <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>Different
+Memories Types </span></b><span lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>ZedBoard includes
+several kinds of memories, such as a 512MB DDR3 memory, a 256MB flash memory
+and a SD slot.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>This gives the flexibility of allowing
+small-size systems to be stored in the flash memory, with the advantages that
+this kind of memory involved; and allowing huge-size systems to be stored in an
+external SD Card.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>Therefore, a very
+fast or a heavy embedded Linux can be developed on ZedBoard.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>Dual Core ARM
+Cortex-A9 </span></b><span lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>ARM is present in
+most of current Smartphones (about 95% in 2010), and a wide range of smart TVs
+and laptops (35% and 10% respectively).<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Therefore, it is the perfect processor
+for the board.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>In addition,
+ZedBoard not only includes a simple core ARM, but also includes a dual core ARM
+Cortex-A9.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Therefore, the processor will not be a
+bottleneck for the developed applications on the board in any case.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>Great Variety of
+Peripherals </span></b><span lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The ZedBoard provides
+a wide range of interfaces to connect the most common peripherals and devices,
+such as monitors, keyboards, speakers, internet connection, etc.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The most important interfaces which the
+ZedBoard provides are the followings: <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Audio line-in,
+line-out, headphone and microphone.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>Ethernet.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>HDMI and VGA.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>OLED display.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>SD Card.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>USB.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Therefore, the
+embedded Linux version will be able to use a monitor, a mouse and a keyboard;
+and will be able also to have internet connection.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:11.5pt'>SoC Architecture </span></b><span
+lang=EN-US style='font-size:11.5pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The ZedBoard is an
+evaluation and development board based on the Xilinx Zynq-7000 All Programmable
+SoC (System-on-a-chip).<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>This board allows creating a Linux,
+Android, Windows or other OS/RTOS-based design.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>Therefore, the
+ZedBoard is not only a FPGA, but it is a Programmable SoC device.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>But, what is the difference between a
+FPGA and a programmable SoC device? The main difference is that the SoC
+combines the processing system (PS) with the programmable logic (PL); as a
+result, it has a higher speed and a less size than a traditional FPGA.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>In particular, the
+ZedBoard combines a dual Corex-A9 Processing System (PS) with 85,000 Series-7
+Programmable Logic (PL) cells. [10]<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:16.0pt'>8. Conclusion </span></b><span
+lang=EN-US style='font-size:16.0pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The building of the Embedded
+Linux with Linuxlink has advantages and disadvantages: <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The main advantage
+is the simplicity for building the complete system with the online version,
+because the menus are classified into different matters like Kernel, RFS,
+packages, etc.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>The Factory version has several options
+which are different from the online options.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Linuxlink checks for problems in the
+chosen configuration and warns the designer offering him a solution as well.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The main
+disadvantage is the poor documentation available.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>Besides, documents are divided and
+spreaded so it is difficult to find and follow them.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The Vivado software
+helps the designer with automated processes and predefined configurations.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>It is difficult to understand all the
+options included in Vivado but the “speedways” assists in using it without
+having to deal with all these options and allowing user to focus on his target.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>The SDK software has
+several templates with illustrative names which make easy to guess the purpose
+of each one. [11] <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>After performing
+these operating system in the first part, we continued second part with
+providing communication between Zedboard and ESP8266 Wifi module.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:16.0pt'>9.
+Acknowledgements </span></b><span lang=EN-US style='font-size:16.0pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>We would like to
+thank our supervisor Orhan GAZI, for his guidance and help throughout the
+project.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span>We further like to thank electronic and
+communication engineer Fatih GENC for the preparation of experimental setup.<o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'><span
+style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=Default><b><span lang=EN-US style='font-size:16.0pt'>10. References </span></b><span
+lang=EN-US style='font-size:16.0pt'><o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>[1] : Article
+Reference: Article Reference: Gin&eacute;s Hidalgo Mart&iacute;nez, Implementing an Embedded
+Linux System in Xilinx Zynq, 2013/2014 <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>[2] : Article
+Reference: Miguel del Castillo Campos, Embedded Linux Integration Using
+Linuxlink Tool and Peripheral Driver Development for Zedboard, Departamento de
+Ingenier&iacute;a Telem&aacute;tica y Electr&oacute;nica, 2008 <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>[3] : Website
+Reference: https://www.circuitbasics.com/basics-uart-communication/ <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>[4] : Article
+Reference: Miguel del Castillo Campos, Embedded Linux Integration Using
+Linuxlink Tool and Peripheral Driver Development for Zedboard, Departamento de
+Ingenier&iacute;a Telem&aacute;tica y Electr&oacute;nica, 2008 <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>[5] : Article
+Reference: Article Reference: Gin&eacute;s Hidalgo Mart&iacute;nez, Implementing an Embedded
+Linux System in Xilinx Zynq, 2013/2014 <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>[6] : Article
+Reference: Miguel del Castillo Campos, Embedded Linux Integration Using
+Linuxlink Tool and Peripheral Driver Development for Zedboard, Departamento de
+Ingenier&iacute;a Telem&aacute;tica y Electr&oacute;nica, 2008 <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>[7] : Website
+Reference: https://en.wikipedia.org/wiki/Tera_Term <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>[8] : Article
+Reference: Miguel del Castillo Campos, Embedded Linux Integration Using Linuxlink
+Tool and Peripheral Driver Development for Zedboard, Departamento de Ingenier&iacute;a
+Telem&aacute;tica y Electr&oacute;nica, 2008 <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>[9] : Article
+Reference: Article Reference: Gin&eacute;s Hidalgo Mart&iacute;nez, Implementing an Embedded
+Linux System in Xilinx Zynq, 2013/2014 <o:p></o:p></span></p>
+
+<p class=Default><span lang=EN-US style='font-size:11.5pt'>[10] : Article
+Reference: Article Reference: Gin&eacute;s Hidalgo Mart&iacute;nez, Implementing an Embedded
+Linux System in Xilinx Zynq, 2013/2014 <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.5pt'>[11] : Article
+Reference: Miguel del Castillo Campos, Embedded Linux Integration Using
+Linuxlink Tool and Peripheral Driver Development for Zedboard, Departamento de
+Ingenier&iacute;a Telem&aacute;tica y Electr&oacute;nica, 2008</span></p>
+
+</div>
+
+</body>
+
+</html>
